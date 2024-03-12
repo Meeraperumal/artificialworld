@@ -1,0 +1,832 @@
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-image: url('https://i.gifer.com/3lFW.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: 'Aclonica';
+}
+
+nav {
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    list-style: none;
+    width: 100%;
+    top: 0;
+    padding: 8px;
+}
+
+.anker {
+    height: 100%;
+    padding: 0 10px;
+    display: flex;
+    text-decoration: none;
+    color: white;
+    align-items: center;
+    transition: 0.15s ease-in-out;
+    font-size: 25px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+i {
+    color: white;
+    margin-right: 15px;
+    padding: 3px;
+}
+
+nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 10px;
+}
+
+#list:last-child {
+    margin-right: 30%;
+}
+
+nav ul #list {
+    height: 50px;
+}
+
+#list:hover {
+    background-color: red;
+}
+
+.logoImg {
+    width: 40px;
+    height: 40px;
+    margin-left: 1%;
+}
+
+.searchBar {
+    display: flex;
+    justify-content: left;
+    margin-left: 3%;
+}
+
+.search {
+    padding: 3px;
+    width: 250px;
+    height: 35px;
+    border-color: red;
+    font-family: 'Aclonica';
+}
+
+.search1 {
+    padding: 5px;
+    color: white;
+    background-color: red;
+    border-color: red;
+    font-weight: 700;
+    font-family: 'Aclonica';
+}
+
+.sideBar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sideBar li {
+    width: 100%;
+}
+
+.sideBar a {
+    width: 100%;
+}
+
+.menuButton {
+    font-size: 10px;
+    display: none;
+}
+
+.image {
+    width: 200px;
+    height: 300px;
+    position: absolute;
+    opacity: 0.7;
+}
+
+.container {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    margin-top: 13%;
+    margin-left: 40%;
+    transform-style: preserve-3d;
+    animation: rotate 30s linear infinite;
+}
+
+.container span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i)*36deg)) translateZ(350px);
+}
+
+.container span:hover .image {
+    transform: translateY(-50px) scale(1.2);
+    opacity: 1;
+    box-shadow: 4px 4px 40px 10px rgb(21, 45, 201);
+    transform: translateX(20px);
+}
+
+@keyframes rotate {
+    0% {
+        transform: perspective(1000px) rotateY(0deg);
+    }
+
+    100% {
+        transform: perspective(1000px) rotateY(360deg);
+    }
+}
+
+.im {
+    display: flex;
+    margin-top: 10%;
+    margin-bottom: 2px;
+}
+
+.pop {
+    width: 200px;
+    height: 250px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.pop:hover {
+    border: 2px solid red;
+}
+
+#popular {
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+}
+
+#par {
+    display: flex;
+    background-color: red;
+    height: 250px;
+    align-items: center;
+}
+
+#scroll {
+    overflow-x: scroll;
+    border-radius: 5px;
+    margin-bottom: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#scroll::-webkit-scrollbar {
+    scrollbar-width: thin;
+}
+
+#scroll::-webkit-scrollbar-thumb {
+    background-color: red;
+    border-radius: 20px;
+}
+#see1 {
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+}
+
+#see {
+    background-color: red;
+}
+.more{
+    display: flex;
+    background-color:#09001d;
+    margin:1% 5% 1% 5%;
+}
+.more:hover{
+    border:2px solid red;
+}
+.lin{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20%;
+}
+.line{
+    width:370px;
+    height:200px;
+    padding:30px;
+}
+.line{
+    cursor: pointer;
+}
+.line1{
+    color:white;
+    font-size: 25px;
+    margin-bottom: 4%;
+}
+.line1:hover{
+    color:red;
+    cursor: pointer;
+}
+.line2{
+    color:white;
+    font-size: 20px;
+
+}
+.line3{
+    color:red;
+    font-size: 25px;
+}
+
+.card {
+    width: 220px;
+    height: 350px;
+    background-color: white;
+    border-radius: 10px;
+    border: solid red;
+    margin: 10px;
+}
+
+.card:hover {
+    transform: translateY(-50px) scale(1);
+    box-shadow: 4px 4px 40px 10px gold;
+    transform: translateX(20px);
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    cursor: pointer;
+    margin: 20px;
+}
+
+.image1 {
+    width: 220px;
+    height: 280px;
+    opacity: 0.8;
+}
+
+.image1:hover {
+    opacity: 1;
+}
+
+.heading {
+    background-color: gold;
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.name {
+    color: red;
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+    cursor: pointer;
+    font-family: 'Aclonica';
+    font-size: 25px;
+}
+
+.name1 {
+    color: red;
+    display: flex;
+    justify-content: center;
+    margin-left: 30px;
+    padding-top: 5px;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.histry {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 60px;
+}
+
+.para {
+    color: gold;
+    font-size: 50px;
+}
+
+.para1 {
+    color: gold;
+    font-size: 30px;
+}
+
+footer {
+    position: relative;
+    width: 100%;
+    background: red;
+    min-height: 100px;
+    padding: 20px 50px;
+    align-items: end;
+}
+
+.foot {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.foot li {
+    list-style: none;
+    display: inline;
+    margin: 20px;
+}
+
+.fpara {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.first {
+    margin-top: 2%;
+    flex-wrap: wrap;
+    width: 95%;
+    height: 600px;
+    margin-left: 5%;
+}
+
+.size {
+    float: left;
+    width: 35%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.size1 {
+    float: left;
+    width: 65%;
+    line-height: 30px;
+    flex-wrap: wrap;
+}
+
+/* .size2{
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+} */
+.img1 {
+    margin-top: 0%;
+    width: 300px;
+    height: 450px;
+    box-shadow: 4px 4px 40px 10px gold;
+}
+
+.pa {
+    color: white;
+    font-size: larger;
+    margin: 20px;
+    flex-wrap: wrap;
+}
+
+.un {
+    display: inline;
+    justify-content: center;
+    padding: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+
+}
+
+.li {
+    display: inline;
+    justify-content: center;
+    padding: 15px;
+    align-items: center;
+    background-color: red;
+    margin-bottom: 5px;
+
+}
+
+/* for mobile phone */
+@media screen and (max-width: 480px) and (min-width: 320px) {
+    body {
+        width: auto;
+        min-height: 110vh;
+        background-image: url('https://i.gifer.com/3lFW.gif');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .hideOnMobile {
+        display: none;
+    }
+
+    .menuButton {
+        display: inline-block;
+    }
+
+    .image {
+        width: 80px;
+        height: 200px;
+        position: absolute;
+        opacity: 0.7;
+    }
+
+    .container {
+        position: relative;
+        width: 0px;
+        height: auto;
+        margin-top: 13%;
+        margin-left: 50%;
+        transform-style: preserve-3d;
+        animation: rotate 30s linear infinite;
+    }
+
+    .container span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform-origin: center;
+        transform-style: preserve-3d;
+        transform: rotateY(calc(var(--i)*36deg)) translateZ(180px);
+    }
+
+    @keyframes rotate {
+        0% {
+            transform: perspective(3000px) rotateY(0deg);
+        }
+
+        100% {
+            transform: perspective(3000px) rotateY(360deg);
+        }
+    }
+
+    .para {
+        font-size: 20px;
+    }
+
+    .para1 {
+        font-size: 15px;
+    }
+
+    .pa {
+        font-size: 10px;
+    }
+
+    .img1 {
+        margin-top: 3%;
+        width: 100px;
+        height: 200px;
+    }
+
+    .li {
+        font-size: 10px;
+    }
+
+    .search {
+        padding: 3px;
+        width: 180px;
+        height: 25px;
+        border-color: red;
+        font-family: 'Aclonica';
+    }
+
+    .search1 {
+        font-size: 10px;
+        padding: 5px;
+        color: white;
+        background-color: red;
+        border-color: red;
+        font-weight: 700;
+        font-family: 'Aclonica';
+    }
+
+    .logoImg {
+        width: 30px;
+        height: 30px;
+        margin-left: 1%;
+    }
+
+    .size1 {
+        float: left;
+        width: 65%;
+        line-height: 20px;
+        flex-wrap: wrap;
+    }
+
+    .im {
+        margin-top: 70%;
+        margin-bottom: 2px;
+    }
+
+    .pop {
+        width: 100px;
+        height: 150px;
+    }
+
+    #popular {
+        font-size: 10px;
+    }
+
+    #par {
+        height: 150px;
+    }
+
+    #last {
+        width: 300px;
+        height: 250px;
+    }
+
+    .card {
+        width: 120px;
+        height: 240px;
+    }
+
+    .image1 {
+        width: 120px;
+        height: 180px;
+    }
+
+    .name {
+        font-size: 12px;
+    }
+
+    .name1 {
+        font-size: 12px;
+        margin-right: 10px;
+    }
+    .more{
+        width:360px;
+    }
+    .lin{
+        margin-left: 5%;
+        padding:3%
+    }
+    .line{
+        width:130px;
+        height:100px;
+        padding:10px;
+        cursor: pointer;
+    }
+    .line1{
+        font-size: 10px;
+    }
+    .line2{
+        font-size: 7px;
+    }
+    .line3{
+        font-size: 10px;
+    }
+}
+
+/*for tablet and ipad*/
+@media screen and (max-width: 768px) and (min-width: 480px) {
+    body {
+        width: auto;
+        min-height: 110vh;
+        background-image: url('https://i.gifer.com/3lFW.gif');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .hideOnMobile {
+        display: none;
+    }
+
+    .menuButton {
+        display: inline-block;
+    }
+
+    .image {
+        width: 100px;
+        height: 250px;
+        position: absolute;
+        opacity: 0.7;
+    }
+
+    .container {
+        position: relative;
+        width: 0px;
+        height: 300px;
+        margin-top: 13%;
+        margin-left: 50%;
+        margin-right: 20%;
+        transform-style: preserve-3d;
+        animation: rotate 30s linear infinite;
+    }
+
+    .container span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform-origin: center;
+        transform-style: preserve-3d;
+        transform: rotateY(calc(var(--i)*36deg)) translateZ(200px);
+    }
+
+    @keyframes rotate {
+        0% {
+            transform: perspective(2000px) rotateY(0deg);
+        }
+
+        100% {
+            transform: perspective(2000px) rotateY(360deg);
+        }
+    }
+
+    .para {
+        font-size: 25px;
+    }
+
+    .para1 {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .pa {
+        font-size: 15px;
+    }
+
+    .img1 {
+        margin-top: 3%;
+        width: 200px;
+        height: 300px;
+    }
+
+    .im {
+        margin-top: 5%;
+        margin-bottom: 2px;
+    }
+
+    .pop {
+        width: 150px;
+        height: 200px;
+    }
+
+    #popular {
+        font-size: 13px;
+    }
+
+    #par {
+        height: 200px;
+    }
+
+    .card {
+        width: 140px;
+        height: 250px;
+    }
+
+    .image1 {
+        width: 140px;
+        height: 180px;
+    }
+
+    .name {
+        font-size: 15px;
+    }
+
+    .name1 {
+        font-size: 15px;
+        margin-right: 10px;
+    }
+    .more{
+        width:660px;
+    }
+    .lin{
+        margin-left: 2%;
+    }
+    .line{
+        width:260px;
+        height:150px;
+        padding:10px;
+        cursor: pointer;
+    }
+    .line1{
+        font-size: 18px;
+        margin-bottom:15%;
+    }
+    .line2{
+        font-size: 10px;
+        margin-bottom:15%;
+
+    }
+    .line3{
+        font-size: 18px;
+        margin-bottom:15%;
+
+    }
+}
+
+/*laptop and small screen*/
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+    body {
+        width: auto;
+        min-height: 110vh;
+        background-image: url('https://i.gifer.com/3lFW.gif');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .hideOnMobile {
+        display: none;
+    }
+
+    .menuButton {
+        display: inline-block;
+    }
+
+    .image {
+        width: 150px;
+        height: 300px;
+        position: absolute;
+        opacity: 0.7;
+    }
+
+    .container {
+        position: relative;
+        width: 0px;
+        height: 300px;
+        margin-top: 13%;
+        margin-left: 50%;
+        margin-right: 20%;
+        transform-style: preserve-3d;
+        animation: rotate 30s linear infinite;
+    }
+
+    .container span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform-origin: center;
+        transform-style: preserve-3d;
+        transform: rotateY(calc(var(--i)*36deg)) translateZ(300px);
+    }
+
+    @keyframes rotate {
+        0% {
+            transform: perspective(2000px) rotateY(0deg);
+        }
+
+        100% {
+            transform: perspective(2000px) rotateY(360deg);
+        }
+    }
+}
+
+/*desktop and large screen*/
+@media screen and (max-width: 1200px) and (min-width: 1024px) {
+    body {
+        width: auto;
+        min-height: 110vh;
+        background-image: url('https://i.gifer.com/3lFW.gif');
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+    .hideOnMobile {
+        display: none;
+    }
+
+    .menuButton {
+        display: inline-block;
+    }
+
+}

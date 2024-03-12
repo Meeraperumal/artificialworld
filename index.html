@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="anime.css">
+    <title>Anime World</title>
+</head>
+
+<body>
+    <script src="anime.js"></script>
+    <!-- for Responsive nav bar -->
+    <div class="head">
+        <nav>
+            <img class="logoImg" src="./images\logo1.png" alt="logo">
+            <form class="searchBar">
+                <input class="search" type="search" placeholder="Search">
+                <button class="search1" type="submit">Search</button>
+            </form>
+            <ul class="sideBar">
+                <li onclick="hideShowbar()"><a href="#"><i class="fa fa-times fa-2x"></i></a></li>
+                <li id="list"><a class="anker" href="index.html">Home</a></li>
+                <li id="list"><a class="anker" href="login.html">Login/Register</a></li>
+                <li id="list"><a class="anker" href="categories.html">Categories</a></li>
+                <li id="list"><a class="anker" href="quiz.html">Quiz</a></li>
+                <li id="list"><a class="anker" href="history.html">History</a></li>
+                <li id="list"><a class="anker" href="aboutus.html">About us</a></li>
+            </ul>
+            <ul>
+                <li id="list" class="hideOnMobile"><a class="anker" href="index.html">Home</a></li>
+                <li id="list" class="hideOnMobile"><a class="anker" href="login.html">Login/Register</a></li>
+                <li id="list" class="hideOnMobile"><a class="anker" href="categories.html">Categories</a></li>
+                <li id="list" class="hideOnMobile"><a class="anker" href="quiz.html">Quiz</a></li>
+                <li id="list" class="hideOnMobile"><a class="anker" href="history.html">History</a></li>
+                <li id="list" class="hideOnMobile"><a class="anker" href="aboutus.html">About us</a></li>
+                <li class="menuButton" onclick="showSidebar()"><a href="#"><i class="fa fa-bars fa-2x"></i></a></li>
+
+            </ul>
+        </nav><br>
+    </div><br><br>
+
+    <!-- home page container -->
+    <div class="container">
+        <span style="--i:1;"><img class="image" src="./images\naruto.jpg"></span>
+        <span style="--i:2;"><img class="image" src="./images\death note.jpg"></span>
+        <span style="--i:3;"><img class="image" src="./images\demonslayer.jpg"></span>
+        <span style="--i:4;"><img class="image" src="./images\drstone.jpg"></span>
+        <span style="--i:5;"><img class="image" src="./images\hunter.jpg"></span>
+        <span style="--i:6;"><img class="image" src="./images\jujutsu kaisen.jpg"></span>
+        <span style="--i:7;"><img class="image" src="./images\onepiece.jpg"></span>
+        <span style="--i:8;"><img class="image" src="./images\overload.jpg"></span>
+        <span style="--i:9;"><img class="image" src="./images\suzume.jpg"></span>
+        <span style="--i:10;"><img class="image" src="./images\the beginning.jpg"></span>
+    </div><br><br>
+    <div id="scroll">
+        <div class="im">
+            <div id="par">
+                <p id="popular">POPULAR</p>
+            </div>
+            <img class="pop" src="./images\popular.jpg">
+            <img class="pop" src="./images\popular1.jpg">
+            <img class="pop" src="./images\popular2.jpg">
+            <img class="pop" src="./images\popular3.jpg">
+            <img class="pop" src="./images\popular4.jpg">
+            <img class="pop" src="./images\popular5.jpg">
+            <img class="pop" src="./images\popular6.jpg">
+            <img class="pop" src="./images\popular7.jpg">
+            <img class="pop" src="./images\popular8.jpg">
+            <div id="par">
+                <p id="popular">MORE</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="see">
+        <center><p id="see1">SEE MORE</p></center>
+    </div>
+    <div class="more">
+        <div>
+          <img class="line" src="./images\front.jpg">
+        </div>
+        <div class="lin">
+            <center><p><span class="line1">The Witch and the Beast</span><br><br><span class="line2"> Majo to yajuu</span><br><br><span class="line3">Episode Released</span></p></center>
+        </div>
+    </div>
+    <div class="more">
+        <div>
+          <img class="line" src="./images\front1.jpg">
+        </div>
+        <div class="lin">
+            <center><p><span class="line1">Sasaki and Peeps</span><br><br><span class="line2"> Sasaki to Pi-chan</span><br><br><span class="line3">Episode Released</span></p></center>
+        </div>
+    </div>
+    <div class="more">
+        <div>
+          <img class="line" src="./images\front2.jpg">
+        </div>
+        <div class="lin">
+            <center><p><span class="line1">The Unwanted Undead Adventurer</span><br><br><span class="line2"> Nozomanu Fushi no Boukensha</span><br><br><span class="line3">Episode Released</span></p></center>
+        </div>
+    </div>
+    <div class="more">
+        <div>
+          <img class="line" src="./images\front3.jpg">
+        </div>
+        <div class="lin">
+            <center><p><span class="line1">The Wrong way to use Healing Magic</span><br><br><span class="line2">Chiyu Mahou no Machigatta Tsukaikata</span><br><br><span class="line3">Episode Released</span></p></center>
+        </div>
+    </div>
+    <div class="more">
+        <div>
+          <img class="line" src="./images\front4.jpg">
+        </div>
+        <div class="lin">
+            <center><p><span class="line1">Undead Unluck</span><br><br><span class="line2"> - </span><br><br><span class="line3">Episode Released</span></p></center>
+        </div>
+    </div>
+    <div class="more">
+        <div>
+          <img class="line" src="./images\front5.jpg">
+        </div>
+        <div class="lin">
+            <center><p><span class="line1">Firefighter Daigo: Recuer in Orange</span><br><br><span class="line2"> Megumi no Daigo: Kyuukoku no Orange</span><br><br><span class="line3">5 Hours 5 Min</span></p></center>
+        </div>
+    </div>
+    <div class="more">
+        <div>
+          <img class="line" src="./images\front6.jpg">
+        </div>
+        <div class="lin">
+            <center><p><span class="line1">Kingdom 5</span><br><br><span class="line2"> - </span><br><br><span class="line3">14 Hours 35 Min</span></p></center>
+        </div>
+    </div>
+</body>
+
+</html>

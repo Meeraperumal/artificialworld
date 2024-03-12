@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Login-Register Form</title>
+</head>
+
+<body>
+    <center>
+        <h1 id="heading">Welcome!!!</h1>
+    </center>
+    <div class="hero">
+        <div class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="login()">Log In</button>
+                <button type="button" class="toggle-btn" onclick="register()">Register</button>
+            </div>
+            <div class="social-icons">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-square-instagram"></i>
+                <i class="fa-brands fa-square-twitter"></i>
+            </div>
+
+            <form onsubmit="return validateForm()" action="index.html" id="login" class="input-group">
+                <div>
+                    <input type="text" id="username" class="input-field" placeholder="User Id"><br>
+                    <div id="nameErr" class="error"></div>
+                </div><br>
+                <div>
+                    <input type="password" id="password" class="input-field" placeholder="Password"><br>
+                    <div id="passErr" class="error"></div>
+                </div>
+                <br><br>
+                <input type="checkbox" class="check-box">
+                <span class="spans">Remember Password</span>
+                <button id="log" type="submit" class="submit-btn">Log In</button>
+            </form>
+
+            <form onsubmit="return validateForm1()" id="register" class="input-group">
+                <div>
+                    <input type="text" id="username1" class="input-field" placeholder="User Id">
+                    <div id="nameErr1" class="error"></div>
+                </div><br>
+                <div>
+                    <input type="text" id="email" class="input-field" placeholder="Email">
+                    <div id="emailErr" class="error"></div>
+                </div><br>
+                <div>
+                    <input type="password" id="password1" class="input-field" placeholder="Password">
+                    <div id="passErr1" class="error"></div>
+                </div>
+                <br>
+                <input type="checkbox" class="check-box">
+                <span class="spans">I agree to the <a href="#">Terms and Services</a></span>
+                <button id="reg" type="submit" class="submit-btn">Register</button>
+            </form>
+        </div>
+    </div>
+    <script src="login.js"></script>
+</body>
+
+</html>

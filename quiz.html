@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="quiz.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Quiz</title>
+</head>
+
+<body>
+    <!-- for Responsive nav bar -->
+    <div class="head">
+        <nav>
+            <img class="logoImg" src="./images\logo1.png" alt="logo">
+            <form class="searchBar">
+                <input class="search" type="search" placeholder="Search">
+                <button class="search1" type="submit">Search</button>
+            </form>
+            <ul class="sideBar">
+                <li onclick="hideShowbar()"><a href="#"><i class="fa fa-times fa-2x"></i></a></li>
+                <li id="list"><a class="anker" href="index.html">Home</a></li>
+                <li id="list"><a class="anker" href="login.html">Login/Register</a></li>
+                <li id="list"><a class="anker" href="categories.html">Categories</a></li>
+                <li id="list"><a class="anker" href="quiz.html">Quiz</a></li>
+                <li id="list"><a class="anker" href="history.html">History</a></li>
+                <li id="list"><a class="anker" href="aboutus.html">About us</a></li>
+            </ul>
+            <ul>
+                <li id="list" class="hideOnMobile"><a class="anker" href="index.html">Home</a></li>
+                <li id="list" class="hideOnMobile"><a class="anker" href="login.html">Login/Register</a></li>
+                <li id="list" class="hideOnMobile"><a class="anker" href="categories.html">Categories</a></li>
+                <li id="list" class="hideOnMobile"><a class="anker" href="quiz.html">Quiz</a></li>
+                <li id="list" class="hideOnMobile"><a class="anker" href="history.html">History</a></li>
+                <li id="list" class="hideOnMobile"><a class="anker" href="aboutus.html">About us</a></li>
+                <li class="menuButton" onclick="showSidebar()"><a href="#"><i class="fa fa-bars fa-2x"></i></a></li>
+
+            </ul>
+        </nav><br>
+    </div>
+    <div class="main">
+            <!-- start button -->
+            <div class="startBtn"><button class="btn">Start Quiz</button></div>
+    </div>
+
+    <!-- Info box -->
+    <div class="popupInfo">
+        <h2>Quiz Rules</h2>
+        <div class="info"> 1. All the questions based on Anime only.</div>
+        <div class="info">2. There are 10 questions, each carrying one point.</div>
+        <div class="info">3. Once you select your answer, you can't reselect.</div>
+        <div class="info">4. You can't exit from the quiz while you're playing.</div>
+        <div class="info">5. You'll get points on the basis of your correct answers.</div>
+        <div class="btnGrp">
+            <button class="exit">Exit Quiz</button>
+            <button class="continue">Continue</button>
+        </div>
+    </div>    
+
+    <!-- Question part -->
+    <div class="container">
+        <section class="quizSection">
+            <div class="quizBox">
+                <h1>Anime Quiz</h1><br>
+
+                <h2 class="quizText">What is the First Anime Ever Produced?</h2>
+                <div class="optionList">
+                    <!-- <div class="option">
+                        <span>htper text nmatkup language</span>
+                    </div>
+                    <div class="option">
+                        <span>htper text nmatkup language</span>
+                    </div>
+                    <div class="option">
+                        <span>htper text nmatkup language</span>
+                    </div>
+                    <div class="option">
+                        <span>htper text nmatkup language</span>
+                    </div> -->
+                </div><br>
+
+
+                <div class="quizFooter">
+                    <button class="nextBtn">Next</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Result Box -->
+    <div class="result">
+    <div class="resultBox">
+        <div class="icon">
+            <i class="fas fa-crown"></i>
+        </div>
+        <h2>Quiz Result !!!</h2>
+        <div class="percentage">
+            <span class="scoreText">Your Score 0 out of 5</span>
+        </div>
+
+        <div class="buttons">
+            <button class="tryBtn">Try Again</button>
+            <button class="homeBtn">Go to Home</button>
+        </div>
+    </div>
+    </div>
+
+    <script src="anime.js"></script>
+    <script src="quiz.js"></script>
+</body>
+
+</html>

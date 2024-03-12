@@ -1,0 +1,541 @@
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Alkatra&family=Poppins&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'alkatra';
+}
+body{
+    background-image: url('./images/back.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height:800px;
+    overflow:hidden;
+}
+nav {
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    list-style: none;
+    width: 100%;
+    top: 0;
+    padding: 8px;
+}
+
+.anker {
+    height: 100%;
+    padding: 0 10px;
+    display: flex;
+    text-decoration: none;
+    color: white;
+    align-items: center;
+    transition: 0.15s ease-in-out;
+    font-size: 25px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+i {
+    color: white;
+    margin-right: 15px;
+    padding: 3px;
+}
+
+nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 10px;
+}
+
+#list:last-child {
+    margin-right: 30%;
+}
+
+nav ul #list {
+    height: 50px;
+}
+
+#list:hover {
+    background-color: red;
+}
+
+.logoImg {
+    width: 40px;
+    height: 40px;
+    margin-left: 1%;
+}
+
+.searchBar {
+    display: flex;
+    justify-content: left;
+    margin-left: 3%;
+}
+
+.search {
+    padding: 3px;
+    width: 250px;
+    height: 35px;
+    border-color: red;
+    font-family: 'Aclonica';
+}
+
+.search1 {
+    padding: 5px;
+    color: white;
+    background-color: red;
+    border-color: red;
+    font-weight: 700;
+    font-family: 'Aclonica';
+}
+
+.sideBar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sideBar li {
+    width: 100%;
+}
+
+.sideBar a {
+    width: 100%;
+}
+
+.menuButton {
+    font-size: 10px;
+    display: none;
+}
+
+a{
+    text-decoration: none;
+}
+.startBtn{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    background-color:gold;
+}
+.startBtn .btn{
+    font-size: 30px;
+    font-weight: 500;
+    padding:15px 30px;
+    outline:none;
+    border: none;
+    border-radius: 50px 0 50px 0;
+    background-color:darkmagenta;
+    color:gold;
+    cursor: pointer;
+}
+.startBtn:hover{
+    box-shadow: 4px 4px 40px 10px  gold;
+    color:white;
+    cursor: pointer;
+}
+
+.popupInfo{
+    display:none;
+    position:absolute;
+    border:3px solid rgb(206, 76, 156);
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:500px;
+    background: #fff;
+    border-radius: 6px;
+    padding:10px 25px;
+    transition: .3s ease;
+}
+.popupInfo h2{
+    font-size: 50px;
+    color:#2aafca;
+    text-align: center;
+}
+.popupInfo .info{
+    display:inline-block;
+    color:#333;
+    font-weight: 500;
+    margin:5px 0;
+    font-size: 17px;
+}
+.popupInfo .btnGrp{
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-top:2px solid lightgrey ;
+    margin-top: 10px;
+    padding:15px 0 7px;
+    justify-content: space-between;
+}
+.popupInfo .btnGrp button{
+    display:inline-flex;
+    justify-content: center;
+    align-items: center;
+    height:45px;
+    width:130px;
+    background: #2aafca;
+    border:1px solid #2aafca;
+    outline: none;
+    border-radius: 6px;
+    color:#fff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition:all 0.3s ease;
+    box-shadow: 0 0 10px rgba(0,0,0,-1);
+    transition: .3s;
+}
+.popupInfo .btnGrp button:first-child{
+    background: transparent;
+    color:#2aafca;
+}
+.popupInfo .btnGrp button:first-child:hover{
+    background: #2aafca;
+    color:white; 
+}
+.popupInfo .btnGrp button:nth-child(2):hover{
+    background: #148aa1;
+}
+
+.container{
+    display:flex;
+    display:none;
+    height:100vh;
+    width:100%;
+    margin-top:10%;
+}
+.quizSection{
+    position:relative;
+    width:100%;
+    background: transparent;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.quizSection .quizBox{
+    position: relative;
+    width:500px;
+    background: #09001d;
+    border:2px solid #c40094;
+    display:flex;
+    flex-direction: column;
+    padding:20px 30px;
+    transition:.1s ease-out;
+}
+.quizBox h1{
+    font-size:32px;
+    text-align: center;
+    color:white;
+}
+.quizText{
+    color:white;
+    font-size: 24px;
+    font-weight: 600;
+}
+.option{
+    color:white;
+    width:100;
+    padding:12px;
+    background: transparent;
+    border:2px solid rgba(255,255,255,.2);
+    border-radius: 3px;
+    font-size: 17px;
+    margin:15px 0;
+    cursor: pointer;
+    transition:.3s;
+}
+.option:hover{
+    background: rgba(255,255,255,.1);
+    border-color: rgba(255,255,255,.1);
+}
+.option.correct{
+    background:#09001d;
+    color:green;
+    border-color: green;
+}
+.option.incorrect{
+    background:#09001d;
+    color:#a60045;
+    border-color: #a60045;
+}
+.option.disabled{
+    pointer-events: none;
+}
+.quizFooter{
+    margin-left: 40%;
+    display:flex;
+    align-items: flex-end;
+    display:block;
+    padding-bottom:20px;
+}
+.nextBtn{
+    padding:7px 25px;
+    font-size: 20px;
+    font-weight: 600;
+    color:#fff;
+    background-color:rgb(223, 67, 169);
+    border-radius: 10px;
+    pointer-events: none;
+    cursor: pointer;
+    transition: .5s;
+}
+.nextBtn:hover{
+    background-color: #007bff;
+    color:gold;
+}
+.nextBtn.active{
+    pointer-events: auto;
+} 
+
+.result{
+    display:none;
+}
+.resultBox{
+    position:absolute;
+    top:50%;
+    left:55%;
+    transform:translate(-50%,-50%) scale(.9);
+    width:400px;
+    background: #09001d;
+    border:2px solid #c40094;
+    border-radius: 6px;
+    padding:20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition:.3s ease;
+}
+.resultBox .icon{
+    font-size: 100px;
+    color:gold;
+}
+.resultBox h2{
+    font-size: 52px;
+    color:#fff;
+}
+.resultBox .percentage{
+    width:300px;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin:20px 0 40px;
+}
+.scoreText{
+    font-size: 26px;
+    font-weight: 600;
+    margin-top: 20px;
+    color: #fff;
+}
+.resultBox .buttons{
+    display:flex;
+}
+.buttons .tryBtn,.homeBtn{
+    width:130px;
+    height:47px;
+    background: #c40094;
+    border:2px solid #c40094;
+    outline:none;
+    border-radius: 6px;
+    font-size:16px;
+    color:#fff;
+    font-weight:600;
+    margin:0 20px 20px;
+    cursor: pointer;
+    transition: .5s;
+}
+.buttons button:nth-child(1):hover{
+    background: #950170;
+}
+.buttons button:nth-child(2){
+    background: transparent;
+    color: #c40094;
+}
+.buttons button:nth-child(2):hover{
+    background: #c40094;
+    color: #fff;
+}
+
+/* for mobile phone */
+@media screen and (max-width: 480px) and (min-width: 320px) {
+    body {
+        width: auto;
+        min-height: 110vh;
+    }
+    .hideOnMobile {
+        display: none;
+    }
+
+    .menuButton {
+        display: inline-block;
+    }
+    .search {
+        padding: 3px;
+        width: 180px;
+        height: 25px;
+        border-color: red;
+        font-family: 'Aclonica';
+    }
+
+    .search1 {
+        font-size: 10px;
+        padding: 5px;
+        color: white;
+        background-color: red;
+        border-color: red;
+        font-weight: 700;
+        font-family: 'Aclonica';
+    }
+
+    .logoImg {
+        width: 30px;
+        height: 30px;
+        margin-left: 1%;
+    }
+    .startBtn .btn{
+        font-size: 20px;
+    }
+    .popupInfo{
+        margin-left: 3%;
+        width:250px;
+    }
+    .popupInfo h2{
+        font-size: 22px;
+    }
+    .popupInfo .info{
+        font-size: 14px;
+    }
+    .popupInfo .btnGrp button{
+        height:25px;
+        width:70px;
+        font-size: 10px;
+    }
+    .container{
+        margin-left: 20%;
+        height:100vh;
+        width:70%;
+        margin-top:49%;
+    }
+    .quizBox h1{
+        font-size:22px;
+    }
+    .quizText{
+        font-size: 14px;
+    }
+    .option{
+        padding:10px;
+        font-size: 10px;
+    }
+    .nextBtn{
+        font-size: 10px;
+    }
+    .resultBox{
+        width:230px;
+        padding:20px;
+    }
+    .resultBox .icon{
+        font-size: 50px;
+    }
+    .resultBox h2{
+        font-size: 28px;
+    }
+    .scoreText{
+        font-size: 16px;
+    }
+    .buttons .tryBtn,.homeBtn{
+        width:70px;
+        height:37px;
+        font-size:10px;
+    }
+}
+
+/*for tablet and ipad*/
+@media screen and (max-width: 768px) and (min-width: 480px) {
+    body {
+        width: auto;
+        min-height: 110vh;
+    }
+    .hideOnMobile {
+        display: none;
+    }
+
+    .menuButton {
+        display: inline-block;
+    }
+    
+    .popupInfo{
+        width:400px;
+    }
+    .popupInfo h2{
+        font-size: 35px;
+    }
+    .popupInfo .info{
+        font-size: 20px;
+    }
+    .popupInfo .btnGrp button{
+        height:40px;
+        width:120px;
+        font-size: 19px;
+    }
+    .container{
+        margin-left: 25%;
+        height:100vh;
+        width:60%;
+        margin-top:35%;
+    }
+    .quizBox h1{
+        font-size:32px;
+    }
+    .quizText{
+        font-size: 24px;
+    }
+    .option{
+        padding:10px;
+        font-size: 20px;
+    }
+    .nextBtn{
+        font-size: 24px;
+    }
+}
+
+/*laptop and small screen*/
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+    body {
+        width: auto;
+        min-height: 110vh;
+    }
+    .container{
+        margin-left: 25%;
+        height:100vh;
+        width:60%;
+        margin-top:20%;
+    }
+}
+
+/*desktop and large screen*/
+@media screen and (max-width: 1200px) and (min-width: 1024px) {
+    body {
+        width: auto;
+        min-height: 110vh;
+    }
+}
